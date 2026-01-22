@@ -7,7 +7,6 @@ import io.reactivex.rxjava3.subjects.BehaviorSubject;
 import io.reactivex.rxjava3.subjects.PublishSubject;
 
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +24,6 @@ public class Main {
         System.out.println("Type 'exit' to exit the program");
 
         Disposable inputDisposable = inputSubject
-                .debounce(500, TimeUnit.MILLISECONDS)
                 .filter(text -> text.length() > 2)
                 .flatMap(tag -> api.getRandomCatPayload(tag)
                         .subscribeOn(Schedulers.io())

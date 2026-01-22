@@ -1,7 +1,7 @@
 # RxCatCollector
 
-This is a Java project built to learn RxJava by interacting with the Cat As A Service API via a CLI interface. The
-project is built with Gradle. Refer to the following command to build the project:
+This is a Java project built to learn RxJava by interacting with the [Cat As A Service API](https://cataas.com/#/api)
+via a CLI interface. The project is built with Gradle. Refer to the following command to build the project:
 
 ```bash
 ./gradlew build
